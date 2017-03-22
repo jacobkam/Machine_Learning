@@ -4,6 +4,10 @@
 ### 1.1Basic Introduction 
 Commonly, when calculating probabilities of a specific event occurrence, we will come out its prior possibilities quickly. However, the answer is wrong in a lots of cases. For instance, there are two bowls and each of them contain two kinds of cookie, chocolate and vanilla.
 
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
          |Bowl 1|Bow2
 ---------|------|----
 Chocolate|20|10
