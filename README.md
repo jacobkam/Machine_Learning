@@ -8,10 +8,11 @@ Commonly, when calculating probabilities of a specific event occurrence, we will
 | ------------- | ------------- |
 | Content Cell  | Content Cell  |
 | Content Cell  | Content Cell  |
-|     da   | Bowl 1 | Bow2 |
-|--------- | ------ | ---- |
-|Chocolate | 20 | 10 |
-|Vanilla   | 20 | 30 |
+
+|        | Bowl 1 | Bow2 |
+| --------- | ------ | ---- |
+| Chocolate | 20 | 10 |
+| Vanilla   | 20 | 30 |
  
 **if we randomly chose a bowl and take out a vanilla cookies, what is the probabilities of the event that we take out the vanilla from bowl 1?**
 
