@@ -8,7 +8,7 @@ Commonly, when calculating probabilities of a specific event occurrence, we will
 | ------------- | ------------- |
 | Content Cell  | Content Cell  |
 | Content Cell  | Content Cell  |
-          | Bowl 1 | Bow2 |
+     da   | Bowl 1 | Bow2 |
 --------- | ------ | ---- |
 Chocolate | 20 | 10 |
 Vanilla   | 20 | 30 |
