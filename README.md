@@ -20,13 +20,13 @@ So here is how I thought:
 
 - we have half chance to choose each bowl: 
 
-*P(bow1)=1/2*
+	*P(bow1)=1/2*
 - Take out vanilla chocolate from bow1: 
 
-*P(bow1 | vanilla)=1/2*
+	*P(bow1 | vanilla)=1/2*
 - Take out vanilla chocolate from bow2: 
 
-*P(bow2 | vanilla)=1/4*
+	*P(bow2 | vanilla)=1/4*
 - Take out vanilla chocolate: 
 
 	*P(vanilla)=P(bow1 | vanilla) + P(bow2 | vanilla)=3/4*
