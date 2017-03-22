@@ -1,5 +1,5 @@
 # Machine Learning
-========================
+
 
 ## 1.Bayesian
 ### 1.1Basic Introduction 
@@ -26,3 +26,4 @@ So here is how I thought:
 - **P(vanilla)P(vanilla | bow1)=P(bow1)P(bow1 | vanilla)**
 - P(vanilla | bow1) = (1/2 * 1/2) / (3/4) = 1/3
 
+And here is my python code:
