@@ -27,3 +27,23 @@ So here is how I thought:
 - P(vanilla | bow1) = (1/2 * 1/2) / (3/4) = 1/3
 
 And here is my python code:
+
+```python
+class Cookie(basic.Suite):
+    def __init__(self,hypothesis):
+        basic.Suite.__init__(self,hypothesis)
+        ## at first, input information
+        self.data_cookie = {"Bow 1":dict(vanilla=30,chocolate=10),
+                            "Bow 2":dict(vanilla=20,chocolate=20)
+                            }
+		## then construct prior probability: 
+		## each bowl is equally chosen
+    def priorDistr(self,hypothesis):
+        for hypo in hypothesis:
+            self.PriorProb(hypo,1)
+		
+		## P(bow2 | vanilla) and P(bow1 | vanilla)
+    def Likelihood(self,hypo,ins):
+        like = self.data_cookie[hypo][ins]
+        return like
+```
