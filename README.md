@@ -55,3 +55,43 @@ class Cookie(basic.Suite):
         like = self.data_cookie[hypo][ins]
         return like
 ```
+#### 1.1.2 Train and  Euro Problem
+Previously, we have talked about prior probabilities and post probabilities. In this chapter, we are going to discuss prior distribution.
+
+**Think about this question:**
+
+*if trains in trail were named from 1 to N, you could see a train named 60. Please estimate how many trains in trail?*
+
+Based on the observation, we can apply bayesian theory to solve this problem:
+
+- we hypothesis that the number of trains is equally occurred in trails. It means that P(1)=P(2)=...=P(N)= 1/n
+
+- Based on a given number, we can calculate the probabilities that number 60 to be seen.
+	- if the number of trains below 60, we cannot see number 60.
+	- if the number of train above or equal to 60, the  probabilities we see number 60 is 1/(number  of trian)
+
+- we can, at first, hypothesize that it may range from 1 to 1000
+
+And here is my code:
+
+```python
+class Train(basic.Suite):
+    def __init__(self,hypothesis):
+        basic.Suite.__init__(self,hypothesis)
+    # based on uniform distribution
+    ## the number of trains distribute uniformly.
+    def priorDistr(self,hypothesis):
+        for hypo in range(1,hypothesis + 1):
+            self.PriorProb(hypo,1)
+    # based on given number of trains 
+    ## update the chance that number 60 to be seen
+    def Likelihood(self,hypo,ins):
+        if hypo < ins:
+            return 0
+        else:
+            return 1.0/hypo
+```
+
+we can print its post probabilities discribution: 
+ 
+![](basic/plots/Train.png)
