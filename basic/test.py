@@ -14,11 +14,12 @@
 ##        AUTHOR: Jingxin Fu
 ##       VERSION: 1.0
 ## Creation Date: 21-02-2017
-## Last Modified: Tue Feb 21 20:43:04 2017
+## Last Modified: Thu Mar 23 15:10:45 2017
 ##===============================================================================
 import models
 
 def main():
+    ## cookie problem
     hypothesis_cookie = ['Bow 1','Bow 2']
     cookie_instance = models.Cookie(hypothesis_cookie)
     testData = ['vanilla']
@@ -26,6 +27,12 @@ def main():
         cookie_instance.Update(cookie)
     
     cookie_instance.Print()
+    
+    ## train prpblem
+    train = models.Train(1000)
+    train.Update(60)
+    train.Plot(title='Train',xlab='number of Trians',ylab='Probabiliries')
+
 
 if __name__ == "__main__":
     main()

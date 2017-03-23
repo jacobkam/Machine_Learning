@@ -14,7 +14,7 @@
 ##        AUTHOR: Jingxin Fu
 ##       VERSION: 1.0
 ## Creation Date: 21-02-2017
-## Last Modified: Wed Mar 22 14:41:13 2017
+## Last Modified: Thu Mar 23 14:59:06 2017
 ##===============================================================================
 import basic 
 
@@ -35,6 +35,7 @@ class Cookie(basic.Suite):
         #self.data_cookie[hypo][ins] -= 1
         return like
 
+
 class Die(basic.Suite):
     """docstring for Die"""
     def __init__(self,hypothesis):
@@ -44,5 +45,20 @@ class Die(basic.Suite):
         for hypo in hypothesis:
             self.PriorProb(hypo,1)
 
-# class Train(basic.Suite):
-#     def Likelihood(self,hypo,ins):
+class Train(basic.Suite):
+    def __init__(self,hypothesis):
+        basic.Suite.__init__(self,hypothesis)
+    # based on uniform distribution
+    ## the number of trains distribute uniformly.
+    def priorDistr(self,hypothesis):
+        for hypo in range(1,hypothesis + 1):
+            self.PriorProb(hypo,1)
+    # based on given number of trains 
+    ## update the chance that number 60 to be seen
+    def Likelihood(self,hypo,ins):
+        if hypo < ins:
+            return 0
+        else:
+            return 1.0/hypo
+
+

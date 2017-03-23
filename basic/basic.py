@@ -14,8 +14,10 @@
 ##        AUTHOR: Jingxin Fu
 ##       VERSION: 1.0
 ## Creation Date: 21-02-2017
-## Last Modified: Wed Mar 22 14:44:33 2017
+## Last Modified: Thu Mar 23 15:10:00 2017
 ##===============================================================================
+import plot
+
 class _basic():
     # initialize a dictionary for storing hypothesis and its probability
     def __init__(self):
@@ -49,6 +51,16 @@ class _basic():
     def Print(self):
         for hypo,prob in self.dic.items():
             print str(hypo) + ":" + "%f"%(prob)
+
+    def Plot(self,title,xlab,ylab):
+        x = []
+        y = []
+        for key,value in self.dic.iteritems():
+            x.append(key)
+            y.append(value)
+        
+        plot.histPlot(x,y,title,xlab,ylab)
+
 
 class Suite(_basic):
 
