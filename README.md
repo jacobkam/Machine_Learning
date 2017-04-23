@@ -95,3 +95,5 @@ class Train(basic.Suite):
 we can print its post probabilities discribution: 
  
 ![](basic/plots/Train.png)
+
+**Another question:**
